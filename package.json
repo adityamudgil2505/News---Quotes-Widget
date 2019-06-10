@@ -1,0 +1,24 @@
+{
+  "name": "Widget-Desktop-Application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityamudgil2505/Widget-Desktop-Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adityamudgil2505/Widget-Desktop-Application/issues"
+  },
+  "homepage": "https://github.com/adityamudgil2505/Widget-Desktop-Application#readme",
+  "devDependencies": {
+    "electron": "^5.0.3"
+  }
+}
