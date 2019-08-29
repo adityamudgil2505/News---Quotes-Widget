@@ -1,25 +1,28 @@
 const url = require('url');
 const path = require('path');
 const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const {app, BrowserWindow, Menu, Tray}=electron;
+const iconPath = path.join(__dirname, 'logo.png');
 let win;
 function createWindow(){
-  win = new BrowserWindow({show:false, minHeight:400, minWidth:600, webPreferences: {
+  win = new BrowserWindow({show:false, height:650, width:1100, frame:false, resizable:false, webPreferences: {
     nodeIntegration: true
     }});
   win.loadURL(url.format({
-    pathname:path.join(__dirname, 'index.html'),
+    pathname:path.join(__dirname, '/index.html'),
     protocol: 'file',
     slashes: true
   }));
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
   win.on('closed', ()=> win=null);
   win.once('ready-to-show', ()=>{
     win.show();
   })
 }
 app.on('ready', createWindow);
+// app.on('ready', ()=>{
+//   new Tray(iconPath);
+// });
 
 // For Mac
 app.on('window-all-closed', ()=>{
