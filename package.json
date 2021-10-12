@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/adityamudgil2505/Widget-Desktop-Application#readme",
   "devDependencies": {
-    "electron": "^5.0.3"
+    "electron": "^11.5.0"
   },
   "dependencies": {
     "dotenv": "^8.0.0",
